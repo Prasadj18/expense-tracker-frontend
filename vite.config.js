@@ -3,9 +3,12 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+
+  
+  base: "/expense-tracker-frontend/",
+
   server: {
     port: 5173,
-    // Proxy API calls to the Express backend during development
     proxy: {
       "/api": {
         target: "http://localhost:5000",
